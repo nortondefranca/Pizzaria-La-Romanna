@@ -13,7 +13,7 @@ O projeto visa substituir os processos manuais atuais por um sistema integrado e
 | Norton de França | 2025197742 | Gerente de Projeto / Analista de Requisitos |
 | Edmilson Albuquerque | 2023283991 | Gerente de Projeto / Analista de Negócio |
 | Hebert Taylor | 2025197878 | Desenvolvedor Front-End / Designer UX/UI |
-| Diogo Alves | 2025197729 | Desenvolvedor Back-End |
+| Diogo Alves | 2025197729 | Analista de Banco de Dados |
 | Julia Freitas | 2025197744 | Analista de Documentação |
 | Layza Saynara | 2025198394 | Designer Gráfico |
 
