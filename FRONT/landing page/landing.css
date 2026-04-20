@@ -1,0 +1,159 @@
+/* =============================================
+   La Romanna — Landing Page (Responsiva)
+   ============================================= */
+
+:root {
+  --bg-cream: #F5EDD6;
+  --green-primary: #A5B83A;
+  --red-primary: #9F1212;
+  --white: #FFFFFF;
+  --text-brown: #5C4030;
+  --dot-color: #FEFEFD;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inria Sans', sans-serif;
+  /* Mesmo fundo do frame — sem bordas brancas */
+  background: var(--bg-cream);
+}
+
+/* ---- WRAPPER ---- */
+.frame-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---- MOBILE FRAME ---- */
+.mobile-frame {
+  width: 393px;
+  height: 852px;
+  position: relative;
+  background: var(--bg-cream);
+  overflow: hidden;
+}
+
+/* ---- DETALHES DECORATIVOS ---- */
+.dot { position: absolute; background: var(--dot-color); }
+.dot-1 { width: 0.55px; height: 2.08px; left: 76.22px;  top: 225.21px; }
+.dot-2 { width: 0.73px; height: 1.59px; left: 291.02px; top: 223.39px; }
+.dot-3 { width: 0.48px; height: 1.56px; left: 77.80px;  top: 218.98px; }
+.dot-4 { width: 0.54px; height: 1.30px; left: 78.31px;  top: 217.16px; }
+.dot-5 { width: 0.30px; height: 1.30px; left: 75.97px;  top: 227.54px; }
+
+/* ---- LOGO PRINCIPAL ---- */
+.logo-main {
+  width: 364px;
+  height: 197px;
+  position: absolute;
+  left: 15px;
+  top: 295px;
+  object-fit: contain;
+}
+
+/* ---- BOTÃO FIDELIDADE ---- */
+.btn-fidelidade {
+  width: 321px;
+  height: 59px;
+  position: absolute;
+  left: 36px;
+  top: 501px;
+  background: var(--green-primary);
+  border-radius: 79.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn-fidelidade-icon {
+  width: 76px;
+  height: 76px;
+  position: absolute;
+  left: -13px;
+  top: -9px;
+  border-radius: 50%;
+  cursor: grab;
+  z-index: 2;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.btn-fidelidade-text {
+  position: absolute;
+  left: 71px;
+  right: 12px;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---- MENSAGEM BEM-VINDO ---- */
+.msg-boas-vindas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ---- TEXTO DIVISOR ---- */
+.divider-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 594px;
+  text-align: center;
+  color: var(--text-brown);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---- BOTÃO IFOOD ---- */
+.btn-ifood {
+  width: 321px;
+  height: 59px;
+  position: absolute;
+  left: 36px;
+  top: 621px;
+  background: var(--red-primary);
+  border-radius: 79.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn-ifood-logo {
+  width: 104px;
+  height: 104px;
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+}
