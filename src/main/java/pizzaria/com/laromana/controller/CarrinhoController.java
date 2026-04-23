@@ -1,8 +1,13 @@
-package pizzaria.com.laromana;
+package pizzaria.com.laromana.controller;
 
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+
+import pizzaria.com.laromana.model.Produto;
+import pizzaria.com.laromana.model.Pedido;
+import pizzaria.com.laromana.model.Cliente;
+import pizzaria.com.laromana.model.Usuario;
+import pizzaria.com.laromana.service.Carrinho;
 
 @RestController
 @RequestMapping("/carrinho")

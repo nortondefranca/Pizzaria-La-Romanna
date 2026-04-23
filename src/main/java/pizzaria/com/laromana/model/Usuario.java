@@ -1,4 +1,4 @@
-package pizzaria.com.laromana;
+package pizzaria.com.laromana.model;
 
 public class Usuario {
 

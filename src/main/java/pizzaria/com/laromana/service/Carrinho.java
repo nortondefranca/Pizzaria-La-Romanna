@@ -1,7 +1,7 @@
-package pizzaria.com.laromana;
+package pizzaria.com.laromana.service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import pizzaria.com.laromana.model.Produto;
 
 public class Carrinho {
 

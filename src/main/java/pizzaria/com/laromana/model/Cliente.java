@@ -1,4 +1,4 @@
-package pizzaria.com.laromana;
+package pizzaria.com.laromana.model;
 
 public class Cliente {
 
@@ -16,15 +16,7 @@ public class Cliente {
         this.pontos += pontos;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public int getPontos() {
-        return pontos;
-    }
+    public Long getId() { return id; }
+    public String getNome() { return nome; }
+    public int getPontos() { return pontos; }
 }

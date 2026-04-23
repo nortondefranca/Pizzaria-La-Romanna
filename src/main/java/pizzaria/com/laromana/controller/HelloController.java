@@ -1,4 +1,4 @@
-package pizzaria.com.laromana;
+package pizzaria.com.laromana.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

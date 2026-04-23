@@ -1,9 +1,9 @@
-package pizzaria.com.laromana;
+package pizzaria.com.laromana.controller;
 
 import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import pizzaria.com.laromana.model.Usuario;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -25,7 +25,6 @@ public class UsuarioController {
         );
 
         usuarios.add(u);
-
         return "Usuário criado!";
     }
 

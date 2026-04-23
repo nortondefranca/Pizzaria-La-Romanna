@@ -1,4 +1,4 @@
-package pizzaria.com.laromana;
+package pizzaria.com.laromana.model;
 
 import java.util.List;
 
@@ -22,8 +22,19 @@ public class Pedido {
                 .sum();
     }
 
-    public Long getId() { return id; }
-    public Cliente getCliente() { return cliente; }
-    public List<Produto> getProdutos() { return produtos; }
-    public double getTotal() { return total; }
+    public Long getId() {
+        return id;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+
+    public double getTotal() {
+        return total;
+    }
 }
