@@ -1,0 +1,12 @@
+pizzaria\com\laromana\controller\PedidoController.class
+pizzaria\com\laromana\model\Cliente.class
+pizzaria\com\laromana\model\Produto.class
+pizzaria\com\laromana\LaromanaApplication.class
+pizzaria\com\laromana\controller\ProdutoController.class
+pizzaria\com\laromana\controller\UsuarioController.class
+pizzaria\com\laromana\service\Carrinho.class
+pizzaria\com\laromana\controller\HelloController.class
+pizzaria\com\laromana\model\Pedido.class
+pizzaria\com\laromana\controller\TestController.class
+pizzaria\com\laromana\model\Usuario.class
+pizzaria\com\laromana\controller\CarrinhoController.class
