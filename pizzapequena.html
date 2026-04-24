@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Pizza Grande - La Romana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: white;
+            width: 393px;
+            min-height: 100vh;
+            overflow-x: hidden;
+            margin: 0 auto;
+
+        }
+
+        /* BANNER */
+        .banner {
+            background: #C93030;
+            color: white;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            text-align: center;
+            padding: 5px 16px;
+        }
+
+        .hero-photo {
+  width: 100%;
+  height: 220px;
+  background: #d0c8bc;
+  position: relative;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-fechar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: rgba(0,0,0,0.18);
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+        /* BODY */
+        .body {
+            padding: 14px 16px 110px;
+            overflow-y: auto;
+        }
+
+        .item-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #252525;
+            margin-bottom: 4px;
+        }
+
+        .item-from {
+            font-size: 13px;
+            color: #252525;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+
+        /* SEÇÃO */
+        .section-hdr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(217, 217, 217, 0.60);
+            padding: 10px 16px;
+            margin: 0 -16px 0;
+        }
+
+        .section-title {
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            color: #6E6E6E;
+        }
+
+        .section-sub {
+            display: block;
+            font-size: 10px;
+            font-weight: 300;
+            color: #6E6E6E;
+            margin-top: 2px;
+        }
+
+        .badge {
+            background: #252525;
+            color: #E1E1E1;
+            font-size: 8px;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        /* OPÇÃO */
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 0;
+            border-bottom: 0.5px solid #E0E0E0;
+            cursor: pointer;
+        }
+
+        .option:last-child {
+            border-bottom: none;
+        }
+
+        .option-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .option-name {
+            font-size: 13px;
+            font-weight: 400;
+            color: #202020;
+            display: block;
+        }
+
+        .option-desc {
+            font-size: 9.5px;
+            font-weight: 300;
+            color: #6E6E6E;
+            line-height: 1.4;
+            margin-top: 2px;
+            display: block;
+        }
+
+        .option-price {
+            font-size: 9.5px;
+            font-weight: 400;
+            color: #6E6E6E;
+            margin-top: 2px;
+            display: block;
+        }
+
+        .option-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 3px;
+            object-fit: cover;
+            background: #eee;
+            flex-shrink: 0;
+        }
+
+        .radio {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #D9D9D9;
+            border: 2px solid #D9D9D9;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s;
+        }
+
+        .radio.sel {
+            background: white;
+            border-color: #C93030;
+        }
+
+        .radio.sel::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #C93030;
+        }
+
+        /* OBS */
+        .obs-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #252525;
+            margin: 14px 0 6px;
+            display: block;
+        }
+
+        .obs-input {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            color: #252525;
+            resize: none;
+            outline: none;
+        }
+
+        .obs-input:focus {
+            border-color: #C93030;
+        }
+
+        /* RODAPÉ */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 393px;
+            background: white;
+            border-top: 1px solid #eee;
+            padding: 10px 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .qty-ctrl {
+            background: #DCDCDC;
+            border-radius: 21px;
+            border: 0.44px solid #DDD;
+            display: flex;
+            align-items: center;
+            padding: 3px;
+            gap: 0;
+            height: 42px;
+            flex-shrink: 0;
+        }
+
+        .qty-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        .qty-btn.plus {
+            background: #C93030;
+            color: white;
+        }
+
+        .qty-btn.minus {
+            background: white;
+            color: #202020;
+        }
+
+        .qty-num {
+            font-size: 18px;
+            font-weight: 500;
+            color: #393939;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .btn-add {
+            flex: 1;
+            border-radius: 21px;
+            border: 0.44px solid #DDD;
+            padding: 0 16px;
+            height: 42px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s;
+            background: #DCDCDC;
+            color: #9C9C9C;
+        }
+
+        .btn-add.pronto {
+            background: #4A7C3F;
+            color: white;
+            border-color: #4A7C3F;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">Na compra de uma pizza grande - ganhe 2 pontos</div>
+
+<div class="hero-photo">
+  <img src="src/pequena.png" alt="Pizza Grande" onerror="this.style.display='none'">
+  <button onclick="fechar()" class="btn-fechar">✕</button>
+</div>
+
+
+
+    <div class="body">
+        <div class="item-title">Pizza Pequena</div>
+        <div class="item-from">A partir de R$ 21,90</div>
+
+        <!-- MASSA -->
+        <div class="section-hdr">
+            <div>
+                <span class="section-title">Escolha a sua Preferência</span>
+                <span class="section-sub">Escolha até 1 opção</span>
+            </div>
+            <span class="badge">OBRIGATÓRIO</span>
+        </div>
+        <div class="option" id="optMassa" onclick="selecionarMassa()">
+            <div class="option-info"><span class="option-name">MASSA TRADICIONAL</span></div>
+            <div class="radio" id="radioMassa"></div>
+        </div>
+
+        <!-- SABORES -->
+        <div class="section-hdr">
+            <div>
+                <span class="section-title">Escolha um sabor</span>
+                <span class="section-sub">Escolha até 1 opção</span>
+            </div>
+            <span class="badge">OBRIGATÓRIO</span>
+        </div>
+        <div id="listaSabores"></div>
+
+        <label class="obs-label">Alguma observação?</label>
+        <textarea class="obs-input" id="obsInput" rows="2"
+            placeholder="Ex: sem cebola, maionese a parte, etc."></textarea>
+    </div>
+
+    <div class="footer">
+        <div class="qty-ctrl">
+            <button class="qty-btn plus" onclick="alterarQtd(1)">+</button>
+            <span class="qty-num" id="qtyNum">1</span>
+            <button class="qty-btn minus" onclick="alterarQtd(-1)">−</button>
+        </div>
+        <button class="btn-add" id="btnAdd" onclick="adicionar()">
+            <span>Adicionar</span>
+            <span id="precoTotal">R$ 0,00</span>
+        </button>
+    </div>
+
+    <script>
+        // ============================================================
+        // MOCK — Pizza Grande 1 Sabor
+        // Quando a API estiver pronta, substitua por:
+        // const res = await fetch("http://ENDERECO-DO-BACK/pizza/grande");
+        // const SABORES = await res.json();
+        // ============================================================
+        const SABORES = [
+    { id:1,  nome:"Lombo Canadense com Catupiry",        desc:"Molho de tomate, queijo mozzarella, lombo canadense, catupiry e orégano",                             preco:28.90, foto:"src/sabores/lombo-catupiry.png" },
+    { id:2,  nome:"Quatro Queijos com Damasco",          desc:"Molho de tomate, queijo mozzarella, gorgonzola, catupiry, parmesão e geleia de damasco",              preco:29.90, foto:"src/sabores/4queijos-damasco.png" },
+    { id:3,  nome:"Quatro Queijos com Geleia de Damasco",desc:"Molho de tomate, queijo mozzarella, gorgonzola, catupiry, parmesão e geleia de damasco",              preco:29.90, foto:"src/sabores/4queijos-geleia.png" },
+    { id:4,  nome:"Sonho de Valsa",                      desc:"Massa de pizza artesanal coberta com chocolate derretido e Sonho de Valsa",                           preco:24.90, foto:"src/sabores/sonho-valsa.png" },
+    { id:5,  nome:"Cartola",                             desc:"Massa crocante, queijo, banana em rodelas, açúcar e canela",                                          preco:23.90, foto:"src/sabores/cartola.png" },
+    { id:6,  nome:"Mozzarella",                          desc:"Molho de tomate, queijo mozzarella e orégano",                                                        preco:21.90, foto:"src/sabores/mozzarella.png" },
+    { id:7,  nome:"Marguerita",                          desc:"Molho de tomate, queijo mozzarella, manjericão e tomates frescos",                                    preco:23.90, foto:"src/sabores/marguerita.png" },
+    { id:8,  nome:"Calabresa",                           desc:"Molho de tomate, queijo mozzarella, linguiça calabresa, cebolas em rodelas e orégano",                preco:24.90, foto:"src/sabores/calabresa.png" },
+    { id:9,  nome:"Portuguesa",                          desc:"Molho de tomate, queijo mozzarella, presunto, ovos cozidos, azeitonas, cebola e orégano",             preco:25.90, foto:"src/sabores/portuguesa.png" },
+    { id:10, nome:"Frango com Catupiry",                 desc:"Molho de tomate, queijo mozzarella, frango desfiado, catupiry e orégano",                             preco:26.90, foto:"src/sabores/frango-catupiry.png" },
+    { id:11, nome:"Frango com Bacon",                    desc:"Molho de tomate, queijo mozzarella, frango desfiado, bacon em cubos e orégano",                       preco:28.90, foto:"src/sabores/frango-bacon.png" },
+    { id:12, nome:"Frango Grelhado com Parmesão",        desc:"Molho de tomate, queijo mozzarella e lascas de frango cobertas com queijo parmesão",                  preco:26.90, foto:"src/sabores/frango-parmesao.png" },
+    { id:13, nome:"Quatro Queijos",                      desc:"Mozzarella, gorgonzola, catupiry e parmesão",                                                         preco:28.90, foto:"src/sabores/4queijos.png" },
+    { id:14, nome:"Churrasco",                           desc:"Molho de tomate, queijo mozzarella, lascas de carne grelhadas com molho barbecue",                    preco:28.90, foto:"src/sabores/churrasco.png" },
+    { id:15, nome:"Toscana",                             desc:"Molho de tomate, queijo mozzarella, linguiça toscana e orégano",                                      preco:26.90, foto:"src/sabores/toscana.png" },
+    { id:16, nome:"Pepperoni com Molho Pesto",           desc:"Molho de tomate, queijo mozzarella, pepperoni e molho pesto",                                         preco:25.90, foto:"src/sabores/pepperoni-pesto.png" },
+    { id:17, nome:"Camarão com Catupiry",                desc:"Molho de tomate, queijo mozzarella, filé de camarão, catupiry e orégano",                             preco:29.90, foto:"src/sabores/camarao-catupiry.png" },
+    { id:18, nome:"Tomate Seco com Rúcula",              desc:"Molho de tomate, queijo mozzarella, tomate seco e rúcula",                                            preco:25.90, foto:"src/sabores/tomate-rucula.png" },
+    { id:19, nome:"Pizza de Alho com Manjericão",        desc:"Molho de tomate, queijo mozzarella, alho crocante e manjericão",                                      preco:25.90, foto:"src/sabores/alho-manjericao.png" },
+    { id:20, nome:"Romeu e Julieta",                     desc:"Queijo mozzarella e catupiry cobertos com calda de goiabada",                                         preco:22.90, foto:"src/sabores/romeu-julieta.png" },
+    { id:21, nome:"Pepperoni com Catupiry",              desc:"Molho de tomate, queijo mozzarella, pepperoni e catupiry",                                            preco:28.90, foto:"src/sabores/pepperoni-catupiry.png" },
+    { id:22, nome:"Geleia de Damasco com Gorgonzola",    desc:"Molho de pomodoro artesanal, queijo mussarela, gorgonzola, geleia de damasco e orégano",              preco:27.90, foto:"src/sabores/geleia-damasco.png" }
+  ];
+        let qtd = 1;
+        let saborSelecionado = null;
+        let massaSelecionada = false;
+
+        // Renderiza sabores
+        const lista = document.getElementById("listaSabores");
+        SABORES.forEach(s => {
+            const row = document.createElement("div");
+            row.className = "option";
+            row.innerHTML = `
+      <div class="option-info">
+        <span class="option-name">${s.nome}</span>
+        <span class="option-desc">${s.desc}</span>
+        <span class="option-price">+ R$ ${s.preco.toFixed(2).replace(".", ",")}</span>
+      </div>
+      <img class="option-img" src="${s.foto}" alt="${s.nome}" onerror="this.style.display='none'">
+      <div class="radio" id="radio-${s.id}"></div>
+    `;
+            row.addEventListener("click", () => {
+                saborSelecionado = s;
+                lista.querySelectorAll(".radio").forEach(r => r.classList.remove("sel"));
+                document.getElementById(`radio-${s.id}`).classList.add("sel");
+                atualizar();
+            });
+            lista.appendChild(row);
+        });
+
+        function selecionarMassa() {
+            massaSelecionada = true;
+            document.getElementById("radioMassa").classList.add("sel");
+            atualizar();
+        }
+
+        function alterarQtd(delta) {
+            if (qtd + delta < 1) return;
+            qtd += delta;
+            document.getElementById("qtyNum").textContent = qtd;
+            atualizar();
+        }
+
+        function atualizar() {
+            const preco = saborSelecionado ? saborSelecionado.preco : 49.90;
+            document.getElementById("precoTotal").textContent = `R$ ${(preco * qtd).toFixed(2).replace(".", ",")}`;
+            const pronto = massaSelecionada && saborSelecionado;
+            document.getElementById("btnAdd").className = "btn-add" + (pronto ? " pronto" : "");
+        }
+
+        function adicionar() {
+    if (!massaSelecionada) { alert("Escolha a preferência de massa!"); return; }
+    if (!saborSelecionado) { alert("Escolha um sabor!"); return; }
+
+    const obs = document.getElementById("obsInput").value.trim();
+    const item = {
+        id: Date.now(),
+        nome: "Pizza Pequena - " + saborSelecionado.nome,
+        preco: saborSelecionado.preco,
+        massa: "Massa Tradicional",
+        observacao: obs,
+        qtd: qtd
+    };
+
+    window.parent.postMessage({ tipo: "addCarrinho", item }, "*");
+    fechar();
+}
+            
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+            // Avisa o pai e fecha o iframe
+            window.parent.postMessage({ tipo: "pizzaAdicionada", qtd, nome: "Pizza Grande" }, "*");
+            fechar();
+        
+
+        function fechar() {
+            window.parent.postMessage({ tipo: "fecharModal" }, "*");
+        }
+    </script>
+</body>
+
+</html>

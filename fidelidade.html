@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>La Romana — Fidelidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="fidelidade.css" />
+</head>
+<body>
+
+<div class="phone-frame">
+
+  <!-- HERO VERMELHO -->
+  <div class="hero">
+    <div class="hero-greeting">
+      Olá, <span class="hero-nome" id="heroNome">Layza!</span>
+    </div>
+    <div class="hero-pontos-sub">Você possui <span id="heroPontos">10</span> pontos</div>
+  </div>
+
+  <div class="content">
+
+    <!-- CARD DE PONTOS -->
+    <div class="pontos-card">
+      <div class="pontos-left">
+        <div class="pontos-label">SEUS PONTOS</div>
+        <div class="pontos-numero" id="pontosNumero">10</div>
+        <div class="pontos-barra-bg">
+          <div class="pontos-barra-fill" id="pontosBarra"></div>
+        </div>
+        <div class="pontos-faltam" id="pontosFaltam">Faltam 20 pontos para pizza grátis</div>
+      </div>
+      <div class="pontos-right">
+        <img src="src/logo principal.png" alt="pizza" class="pontos-img" onerror="this.style.opacity='0.3'">
+      </div>
+    </div>
+
+    <!-- BOTÃO VER CARDÁPIO -->
+    <button class="cardapio-btn" onclick="window.location.href='cardapio.html'">Ver cardápio</button>
+
+    <!-- RECOMPENSAS -->
+    <div class="section-row">
+      <span class="section-title">Recompensas</span>
+      <button class="ver-mais-btn" id="verMaisBtn">Ver mais</button>
+    </div>
+
+    <!-- Recompensa 1 — bloqueada -->
+    <div class="recompensa-card" id="recomp-pizza">
+      <div class="recomp-icon-box">🍕</div>
+      <div class="recomp-info">
+        <div class="recomp-nome">Pizza grátis</div>
+        <div class="recomp-pts">30 pontos necessários</div>
+      </div>
+      <button class="resgatar-btn locked" id="btn-pizza" data-id="pizza">Resgatar</button>
+    </div>
+
+    <!-- Recompensa 2 — disponível -->
+    <div class="recompensa-card" id="recomp-desconto">
+      <div class="recomp-icon-box">🎟️</div>
+      <div class="recomp-info">
+        <div class="recomp-nome">10% de desconto</div>
+        <div class="recomp-pts">10 pontos necessários</div>
+      </div>
+      <button class="resgatar-btn available" id="btn-desconto" data-id="desconto">Resgatar</button>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="bottom-nav">
+    <div class="nav-pill">
+      <div class="nav-item" onclick="window.location.href='home.html'">
+        <img src="src/inicio.png" alt="home" class="nav-icon faded" />
+      </div>
+      <div class="nav-item" onclick="window.location.href='cardapio.html'">
+        <img src="src/cardapio.png" alt="cardápio" class="nav-icon faded" />
+      </div>
+      <div class="nav-item" onclick="window.location.href='meuspedidos.html'">
+        <img src="src/pedidos.png" alt="pedidos" class="nav-icon faded" />
+      </div>
+      <div class="nav-item active" onclick="window.location.href='fidelidade.html'">
+        <img src="src/perfil.png" alt="fidelidade" class="nav-icon" />
+        <span class="nav-label">Fidelidade</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL CONFIRMAÇÃO -->
+<div class="modal-overlay" id="modal" style="display:none;">
+  <div class="modal-box">
+    <div class="modal-emoji" id="modalEmoji">🎉</div>
+    <div class="modal-title" id="modalTitle">Confirmar resgate?</div>
+    <div class="modal-sub" id="modalSub"></div>
+    <button class="modal-ok" id="modalOk">Entendi</button>
+  </div>
+</div>
+
+<script src="fidelidade.js"></script>
+</body>
+</html>

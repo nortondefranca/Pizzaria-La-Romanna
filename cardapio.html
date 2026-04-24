@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>La Romana - Cardápio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="cardapio.css">
+</head>
+
+<body>
+  <div class="phone">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">Faça agora mesmo o seu pedido!</div>
+
+    <!-- HEADER -->
+    <div class="header">
+
+      <!-- LOGO: troque o src pela sua logo -->
+      <img src="src/logo principal.png" alt="La Romana" class="header-logo-img">
+
+      <a href="carrinho.html" class="cart-icon" id="cartIcon" onclick="abrirDrawer(); return false;">
+        <img src="src/carrinho.png" alt="Carrinho" width="27" height="27">
+        <span class="cart-badge" id="cartCount">0</span>
+      </a>
+
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-area">
+      <div class="search-bar">
+        <input type="text" placeholder="O que quero pedir hoje?" id="searchInput">
+        <div class="search-btns">
+          <button class="search-dark" id="searchBtn">
+            <svg width="14" height="14" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"
+              style="margin-left:4px">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIES — gerado pelo JS usando fotoCat do dados.js -->
+    <div class="categories" id="categories"></div>
+
+    <!-- MENU CONTENT — preenchido pelo JS com os itens do dados.js -->
+    <div class="content" id="menuContent"></div>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+      <div class="nav-wrap">
+
+        <!-- CASINHA: troque o href pelo link da sua home -->
+        <a href="home.html" class="nav-circle">
+          <svg width="19" height="19" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"
+            style="opacity:.7">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+        </a>
+
+        <!-- CARDÁPIO (ativo) -->
+        <div class="nav-center">
+          <svg width="17" height="17" fill="none" stroke="#252525" stroke-width="2" viewBox="0 0 24 24">
+            <path
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+          </svg>
+          <span>Cardápio</span>
+        </div>
+
+        <!-- PERFIL: troque o href pelo link do seu perfil -->
+        <a href="meuspedidos.html" class="nav-circle">
+          <img src="src/pedidos.png" alt="Fidelidade" width="27" height="27">
+        </a>
+
+        <!-- PERFIL: troque o href pelo link do seu perfil -->
+        <a href="fidelidade.html" class="nav-circle">
+          <svg width="19" height="19" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </a>
+
+      </div>
+    </nav>
+
+  </div>
+
+  <!-- MODAL DO ITEM -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-banner" id="modalBanner" style="display:none"></div>
+
+      <div class="modal-photo" id="modalPhoto" style="position:relative">
+        <div class="modal-restaurant" id="modalRestaurant" style="display:none">
+          <img class="modal-restaurant-logo" id="modalRestaurantLogo" src="" alt="">
+          <div class="modal-restaurant-info">
+            <span class="modal-restaurant-name" id="modalRestaurantName"></span>
+            <span class="modal-restaurant-rating" id="modalRestaurantRating"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-name" id="modalName"></div>
+        <div class="modal-desc" id="modalDesc"></div>
+        <div class="modal-opcoes" id="modalOpcoes"></div>
+        <label class="modal-obs-label">Alguma observação?</label>
+        <textarea class="modal-obs-input" id="modalObs" rows="2"
+          placeholder="Ex: sem cebola, molho a parte..."></textarea>
+      </div>
+
+      <div class="modal-footer-fixed">
+        <div class="modal-qty-ctrl">
+          <button class="modal-qty-btn" id="modalQtyMinus">−</button>
+          <span class="modal-qty-num" id="modalQtyNum">1</span>
+          <button class="modal-qty-btn" id="modalQtyPlus">+</button>
+        </div>
+        <button class="modal-pedir" id="modalPedir">
+          <span>Adicionar</span>
+          <span class="modal-pedir-price" id="modalPrice">R$ 0,00</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="dados.js"></script>
+  <script src="app.js"></script>
+
+  <!-- MODAL IFRAME (pizzas customizadas) -->
+  <div class="modal-overlay" id="modalIframeOverlay">
+    <div class="modal" id="modalIframeBox">
+      <iframe id="modalIframe" src="" style="width:100%; height:100%; border:none; display:block;"></iframe>
+    </div>
+  </div>
+
+  <!-- CARRINHO DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-header">
+      <h2 class="drawer-title">Itens adicionados</h2>
+      <button class="drawer-close" id="drawerClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItemsDrawer"></div>
+    <div class="cart-resumo">
+      <h3 class="resumo-title">Resumo</h3>
+      <div class="resumo-row"><span>Subtotal:</span><span id="resumoSubtotal">R$ 0,00</span></div>
+      <div class="resumo-row"><span>Taxa de entrega:</span><span id="resumoTaxa">Calcule abaixo</span></div>
+      <div class="resumo-row"><span>Desconto:</span><span class="green" id="resumoDesconto">-R$ 00,00</span></div>
+    </div>
+    <div class="cart-footer">
+      <div class="footer-total"><span class="footer-total-label" id="footerTotal">Total: R$ 0,00</span></div>
+      <button class="footer-continuar" onclick="window.location.href='ident.html'">Continuar</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="carrinho.css">
+  <script src="carrinho.js"></script>
+</body>
+
+</html>

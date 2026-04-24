@@ -1,0 +1,343 @@
+/* ==============================
+   RESET & BASE
+============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* ==============================
+   PHONE FRAME
+============================== */
+.phone-frame {
+  width: 393px;
+  min-height: 852px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ==============================
+   HEADER
+============================== */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 32px 22px 18px;
+  gap: 10px;
+  position: relative;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #C93030;
+  font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.back-btn:hover {
+  opacity: 0.7;
+}
+
+.header-title {
+  font-size: 18.14px;
+  font-weight: 600;
+  color: #252525;
+  text-align: center;
+  flex: 1;
+}
+
+/* ==============================
+   CONTENT AREA
+============================== */
+.content {
+  padding: 0 22px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ==============================
+   TOGGLE GROUP
+============================== */
+.toggle-group {
+  display: flex;
+  background: #F1F1F1;
+  border-radius: 8px;
+  border: 0.47px solid #BCBCBC;
+  padding: 2px;
+  gap: 0;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px 6px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15.18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: transparent;
+  color: #5C5C5C;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.toggle-btn.active {
+  background: #9B1C1C;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+
+.toggle-btn .btn-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ==============================
+   FIELD GROUPS
+============================== */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-group.half {
+  flex: 1;
+}
+
+.row-fields {
+  display: flex;
+  gap: 5px;
+}
+.row-fields { display: flex; gap: 5px; }
+.field-group.half       { flex: 0 0 80px; }
+.field-group.half-large { flex: 1; }
+
+
+
+
+/* ==============================
+   LABELS
+============================== */
+.field-label {
+  font-size: 13.77px;
+  font-weight: 500;
+  color: #252525;
+  letter-spacing: 0.41px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.auto-tag {
+  font-size: 10.01px;
+  font-weight: 500;
+  color: #4A7C3F;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background: #4A7C3F;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.optional-tag {
+  font-size: 6.37px;
+  font-weight: 500;
+  color: #503C33;
+  background: #F0E1C5;
+  border-radius: 10.78px;
+  padding: 2px 6px;
+  letter-spacing: 0;
+}
+
+/* ==============================
+   INPUT WRAPPERS
+============================== */
+.input-wrapper {
+  background: #F1F1F1;
+  border-radius: 8px;
+  border: 0.47px solid #BCBCBC;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  height: 40.56px;
+  gap: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #9B1C1C;
+  box-shadow: 0 0 0 2px rgba(155, 28, 28, 0.12);
+}
+
+.input-wrapper.error {
+  border-color: #C93030;
+}
+
+.input-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14.11px;
+  font-weight: 400;
+  color: #252525;
+  flex: 1;
+  min-width: 0;
+}
+
+.input-wrapper input::placeholder {
+  color: #252525;
+  opacity: 0.35;
+}
+
+.input-wrapper input[readonly] {
+  cursor: default;
+}
+
+/* ==============================
+   STATUS TAG
+============================== */
+.status-tag {
+  font-size: 10.01px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.status-tag.green {
+  color: #4A7C3F;
+}
+
+.status-tag.red {
+  color: #C93030;
+}
+
+.status-tag.hidden {
+  display: none;
+}
+
+.status-icon {
+  width: 9px;
+  height: 9px;
+}
+
+/* ==============================
+   ERROR MESSAGES
+============================== */
+.error-msg {
+  font-size: 10px;
+  color: #C93030;
+  font-weight: 500;
+  min-height: 14px;
+}
+
+/* ==============================
+   CONFIRM BUTTON
+============================== */
+.confirm-btn {
+  width: 100%;
+  height: 49px;
+  background: #9B1C1C;
+  border: 0.47px solid #BCBCBC;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15.18px;
+  font-weight: 600;
+  color: #FEFEFD;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  transition: background 0.2s, transform 0.1s;
+  letter-spacing: 0.3px;
+}
+
+.confirm-btn:hover {
+  background: #7e1616;
+}
+
+.confirm-btn:active {
+  transform: scale(0.98);
+}
+
+.confirm-btn .btn-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(10);
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #9B1C1C;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

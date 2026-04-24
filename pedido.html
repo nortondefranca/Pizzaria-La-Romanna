@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedido Realizado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="pedido.css" />
+</head>
+<body>
+
+<div class="phone-frame">
+
+  <!-- Hero verde -->
+  <div class="hero">
+    <div class="avatar-circle">
+      <span class="avatar-icon">✅</span>
+    </div>
+    <h1 class="hero-title">Pedido realizado<br>com sucesso!</h1>
+    <p class="hero-order">Pedido #0022</p>
+    <div class="delivery-badge">
+      🛵 Previsão de entrega: 50 a 60 min
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- Programa de fidelidade -->
+    <div class="fidelidade-header">
+      <div class="fidelidade-line"></div>
+      <span class="fidelidade-label">PROGRAMA DE FIDELIDADE</span>
+      <div class="fidelidade-line"></div>
+    </div>
+
+    <div class="pontos-card">
+      <span class="pontos-icon">🏅</span>
+      <div class="pontos-info">
+        <div class="pontos-title">Quer acumular seus pontos?</div>
+        <div class="pontos-sub">Você ganhou 2 pontos nessa compra! Cadastre-se agora e não perca.</div>
+      </div>
+    </div>
+
+    <!-- Formulário -->
+    <div class="seus-dados">Seus dados</div>
+
+    <div class="field-group">
+      <div class="input-wrapper" id="nome-wrapper">
+        <input type="text" id="nome" placeholder="Nome completo" maxlength="80" />
+      </div>
+      <span class="error-msg" id="nome-error"></span>
+    </div>
+
+    <div class="field-group">
+      <div class="input-wrapper" id="telefone-wrapper">
+        <input type="tel" id="telefone" placeholder="Telefone - (00) 00000-0000" maxlength="16" />
+      </div>
+      <span class="error-msg" id="telefone-error"></span>
+    </div>
+
+    <div class="field-group">
+      <div class="input-wrapper" id="cpf-wrapper">
+        <input type="text" id="cpf" placeholder="CPF - 000.000.000-00" maxlength="14" />
+      </div>
+      <span class="error-msg" id="cpf-error"></span>
+    </div>
+
+    <!-- Botão principal -->
+    <button class="confirm-btn" id="confirm-btn">
+      ✓ QUERO ACUMULAR MEUS PONTOS
+    </button>
+
+    <!-- Agora não -->
+    <button class="skip-btn" id="skip-btn">Agora não</button>
+
+  </div>
+
+</div>
+
+<script src="pedido.js"></script>
+</body>
+</html>

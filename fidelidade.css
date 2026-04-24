@@ -1,0 +1,361 @@
+/* =============================================
+   La Romana — Fidelidade
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F0E4C0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.phone-frame {
+  width: 393px;
+  min-height: 852px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ---- HERO ---- */
+.hero {
+  background: #9B1C1C;
+  padding: 52px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero-greeting {
+  font-size: 33px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero-nome {
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-pontos-sub {
+  font-size: 18.59px;
+  font-weight: 500;
+  color: #F0E4C0;
+}
+
+/* ---- CONTENT ---- */
+.content {
+  padding: 20px 22px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---- CARD PONTOS ---- */
+.pontos-card {
+  background: #FFFAEC;
+  border-radius: 23px;
+  border: 3px solid #8B7060;
+  padding: 18px 16px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pontos-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pontos-label {
+  font-size: 12.24px;
+  font-weight: 600;
+  color: #5C4030;
+}
+
+.pontos-numero {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62px;
+  font-weight: 700;
+  color: #9B1C1C;
+  line-height: 1;
+}
+
+.pontos-barra-bg {
+  width: 100%;
+  height: 10px;
+  background: #5C4030;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.pontos-barra-fill {
+  height: 100%;
+  background: #4A7C3F;
+  border-radius: 5px;
+  width: 0%;
+  transition: width 0.6s ease;
+}
+
+.pontos-faltam {
+  font-size: 12.08px;
+  font-weight: 700;
+  color: #5C4030;
+  letter-spacing: 0.24px;
+}
+
+.pontos-right { flex-shrink: 0; }
+
+.pontos-img {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ---- CARDÁPIO BTN ---- */
+.cardapio-btn {
+  background: #9B1C1C;
+  border: none;
+  border-radius: 24px;
+  height: 67px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22.83px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.cardapio-btn:hover  { background: #7e1616; }
+.cardapio-btn:active { transform: scale(0.98); }
+
+/* ---- SECTION ROW ---- */
+.section-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 20.30px;
+  font-weight: 700;
+  color: #202020;
+}
+
+.ver-mais-btn {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11.28px;
+  font-weight: 500;
+  color: #C93030;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.ver-mais-btn:hover { opacity: 0.7; }
+
+/* ---- RECOMPENSA CARDS ---- */
+.recompensa-card {
+  background: rgba(255, 232, 190, 0.35);
+  border: 0.47px solid #C08F36;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recomp-icon-box {
+  width: 47px;
+  height: 49px;
+  background: #E1E1E1;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.recomp-info { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+
+.recomp-nome {
+  font-size: 14.28px;
+  font-weight: 700;
+  color: #5C4030;
+  letter-spacing: 0.29px;
+}
+
+.recomp-pts {
+  font-size: 12.08px;
+  font-weight: 600;
+  color: #6E6E6E;
+  letter-spacing: 0.24px;
+}
+
+/* ---- RESGATAR BTN ---- */
+.resgatar-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16px;
+  cursor: pointer;
+  min-width: 66px;
+  height: 20px;
+  transition: opacity 0.2s;
+}
+
+.resgatar-btn.locked {
+  background: #D8D8D8;
+  color: #989797;
+  cursor: not-allowed;
+}
+
+.resgatar-btn.available {
+  background: #4A7C3F;
+  color: #fff;
+}
+
+.resgatar-btn.available:hover { opacity: 0.85; }
+
+/* ---- BOTTOM NAV ---- */
+.bottom-nav {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-pill {
+  background: #252525;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  gap: 2px;
+}
+
+.nav-item {
+  width: 42px;
+  height: 41px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-item.active {
+  background: #fff;
+  border-radius: 22px;
+  width: auto;
+  padding: 0 14px;
+  gap: 6px;
+}
+
+.nav-label {
+  font-size: 11.96px;
+  font-weight: 500;
+  color: #252525;
+  white-space: nowrap;
+}
+
+.nav-icon { width: 22px; height: 22px; object-fit: contain; }
+.nav-icon.faded { opacity: 0.7; }
+
+/* ---- MODAL ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-box {
+  background: #fff;
+  width: 300px;
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+.modal-emoji { font-size: 48px; }
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #202020;
+}
+
+.modal-sub {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-ok {
+  margin-top: 6px;
+  background: #9B1C1C;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-ok:hover { background: #7e1616; }
+
+/* ---- TOAST ---- */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #252525;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.toast.show  { transform: translateX(-50%) translateY(0); opacity: 1; }
+.toast.green { background: #4A7C3F; }
+.toast.red   { background: #9B1C1C; }

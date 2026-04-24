@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>La Romana — Carrinho</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+
+<!-- OVERLAY ESCURO (fecha ao clicar) -->
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- DRAWER DO CARRINHO -->
+<div class="cart-drawer" id="cartDrawer">
+
+  <!-- Handle de arrastar -->
+  <div class="drawer-handle"></div>
+
+  <div class="drawer-header">
+    <h2 class="drawer-title">Itens adicionados</h2>
+    <button class="drawer-close" id="drawerClose">✕</button>
+  </div>
+
+  <!-- Lista de itens -->
+  <div class="cart-items" id="cartItems">
+    <!-- preenchido pelo JS -->
+  </div>
+
+  <!-- Resumo -->
+  <div class="cart-resumo">
+    <h3 class="resumo-title">Resumo</h3>
+    <div class="resumo-row">
+      <span>Subtotal:</span>
+      <span id="resumoSubtotal">R$ 0,00</span>
+    </div>
+    <div class="resumo-row">
+      <span>Taxa de entrega:</span>
+      <span id="resumoTaxa">Calcule abaixo</span>
+    </div>
+    <div class="resumo-row">
+      <span>Desconto:</span>
+      <span class="green" id="resumoDesconto">-R$ 00,00</span>
+    </div>
+  </div>
+
+  <!-- Footer fixo -->
+  <div class="cart-footer">
+    <div class="footer-total">
+      <span class="footer-total-label" id="footerTotal">Total: R$ 0,00</span>
+    </div>
+    <button class="footer-continuar" id="footerContinuar" onclick="window.location.href='delivery1.html'">
+      Continuar
+    </button>
+  </div>
+
+</div>
+
+<script src="carrinho.js"></script>
+</body>
+</html>

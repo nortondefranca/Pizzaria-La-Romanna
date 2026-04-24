@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Identificação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="ident.css" />
+</head>
+<body>
+
+<div class="phone-frame">
+
+  <div class="header">
+    <button class="back-btn" id="back-btn">&#8249;</button>
+    <h1 class="header-title">IDENTIFICAÇÃO</h1>
+  </div>
+
+  <div class="content">
+
+    <!-- Avatar -->
+    <div class="avatar-area">
+      <div class="avatar-circle">
+        <span class="avatar-icon">👤</span>
+      </div>
+    </div>
+
+    <!-- Textos -->
+    <div class="intro-title">Quem vai receber?</div>
+    <div class="intro-sub">Informe seu nome e telefone para identificarmos seu pedido.</div>
+
+    <!-- Campos -->
+    <div class="field-group">
+      <div class="input-wrapper" id="nome-wrapper">
+        <input type="text" id="nome" placeholder="Nome completo" maxlength="80" />
+      </div>
+      <span class="error-msg" id="nome-error"></span>
+    </div>
+
+    <div class="field-group">
+      <div class="input-wrapper" id="telefone-wrapper">
+        <input type="tel" id="telefone" placeholder="Telefone - (00) 00000-0000" maxlength="16" />
+      </div>
+      <span class="error-msg" id="telefone-error"></span>
+    </div>
+
+    <a href="pagamento.html" class="confirm-btn" id="confirm-btn">✓ CONFIRMAR PARA PAGAMENTO</a>
+
+  </div>
+</div>
+
+<script src="ident.js"></script>
+</body>
+</html>

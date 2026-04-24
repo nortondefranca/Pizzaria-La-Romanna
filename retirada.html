@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Endereço de Entrega — Retirada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="retirada.css" />
+</head>
+<body>
+
+<div class="phone-frame">
+
+  <!-- Header -->
+  <div class="header">
+    <button class="back-btn" id="back-btn">&#8249;</button>
+    <h1 class="header-title">ENDEREÇO DE ENTREGA</h1>
+  </div>
+
+  <div class="content">
+
+    <!-- Toggle -->
+    <div class="toggle-group">
+      <button class="toggle-btn" id="btn-delivery" onclick="window.location.href='delivery1.html'">
+        <img src="src/moto.png" alt="delivery" class="btn-icon" />
+        Delivery
+      </button>
+      <button class="toggle-btn active" id="btn-retirada">
+        <img src="src/shop.png" alt="retirada" class="btn-icon" />
+        Retirada
+      </button>
+    </div>
+
+    <!-- Endereço da Pizzaria -->
+    <div class="field-group">
+      <label class="field-label">ENDEREÇO DA PIZZARIA</label>
+      <div class="info-box">
+        <img src="src/local.png" alt="pin" class="info-icon" onerror="this.style.opacity='0'">
+        <div class="info-text">
+          <div class="info-main">Avenida Norte, 3476</div>
+          <div class="info-sub">Rosarinho - Recife/PE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Horário de Funcionamento -->
+    <div class="field-group">
+      <label class="field-label">HORÁRIO DE FUNCIONAMENTO</label>
+      <div class="info-box">
+        <img src="src/relogio.png" alt="clock" class="info-icon" onerror="this.style.opacity='0'">
+        <div class="info-text">
+          <div class="info-main">Terça à Domingo</div>
+          <div class="info-sub">17h30 às 22h00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tempo Estimado -->
+    <div class="field-group">
+      <label class="field-label">TEMPO ESTIMADO PARA RETIRADA</label>
+      <div class="info-box">
+        <div class="info-text">
+          <div class="info-main">Seu pedido estará pronto em:</div>
+          <span class="tempo-badge">
+            <img src="src/moto.png" alt="timer" class="badge-icon" onerror="this.style.opacity='0'">
+            30 a 40 minutos
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aviso -->
+    <p class="aviso-text">
+      Ao chegar, informe seu nome e número do pedido no balcão
+    </p>
+
+    <!-- Botão Confirmar -->
+    <button class="confirm-btn" id="confirm-btn">
+      <img src="src/v.png" alt="check" class="btn-icon" onerror="this.style.opacity='0'">
+      CONFIRMAR RETIRADA
+    </button>
+
+  </div>
+
+</div>
+
+<script src="retirada.js"></script>
+</body>
+</html>

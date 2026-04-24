@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="pagamento.css" />
+</head>
+<body>
+
+<div class="phone-frame">
+
+  <!-- Header -->
+  <div class="header">
+    <button class="back-btn" id="back-btn">&#8249;</button>
+    <h1 class="header-title">PAGAMENTO</h1>
+  </div>
+
+  <div class="content">
+
+    <!-- Banner de pontos -->
+    <div class="pontos-banner">
+      🎉 Você ganhará 2 pontos com essa compra!
+    </div>
+
+    <!-- Forma de pagamento -->
+    <div class="section-label">FORMA DE PAGAMENTO</div>
+
+    <div class="payment-list">
+
+      <div class="payment-option" id="opt-credito" data-method="credito">
+        <div class="payment-icon">💳</div>
+        <div class="payment-info">
+          <div class="payment-name">Cartão de Crédito</div>
+          <div class="payment-sub">Visa, Mastercard e Elo</div>
+        </div>
+        <div class="radio-circle" id="radio-credito"></div>
+      </div>
+
+      <div class="payment-option" id="opt-debito" data-method="debito">
+        <div class="payment-icon">💳</div>
+        <div class="payment-info">
+          <div class="payment-name">Cartão de Débito</div>
+          <div class="payment-sub">Visa, Mastercard e Elo</div>
+        </div>
+        <div class="radio-circle" id="radio-debito"></div>
+      </div>
+
+      <div class="payment-option" id="opt-pix" data-method="pix">
+        <div class="payment-icon">⚡</div>
+        <div class="payment-info">
+          <div class="payment-name">Pix</div>
+          <div class="payment-sub">Aprovação Imediata</div>
+        </div>
+        <div class="radio-circle" id="radio-pix"></div>
+      </div>
+
+      <div class="payment-option" id="opt-dinheiro" data-method="dinheiro">
+        <div class="payment-icon">💵</div>
+        <div class="payment-info">
+          <div class="payment-name">Dinheiro</div>
+          <div class="payment-sub">Pagamento na Entrega</div>
+        </div>
+        <div class="radio-circle" id="radio-dinheiro"></div>
+      </div>
+
+    </div>
+
+    <!-- Resumo -->
+    <div class="resumo-title">Resumo</div>
+    <div class="resumo-card">
+      <div class="resumo-row">
+        <span class="resumo-label">Subtotal:</span>
+        <span class="resumo-value" id="subtotal">R$ 107,70</span>
+      </div>
+      <div class="resumo-row">
+        <span class="resumo-label">Taxa de entrega:</span>
+        <span class="resumo-value" id="taxa">R$ 8,00</span>
+      </div>
+      <div class="resumo-row">
+        <span class="resumo-label">Desconto:</span>
+        <span class="resumo-value green" id="desconto">-R$ 00,00</span>
+      </div>
+      <div class="resumo-divider"></div>
+      <div class="resumo-row total">
+        <span class="resumo-label-total">Total:</span>
+        <span class="resumo-value-total" id="total">R$ 115,70</span>
+      </div>
+    </div>
+
+ <a href="pedido.html" class="confirm-btn" id="confirm-btn">✓ CONFIRMAR PAGAMENTO</a>
+
+  </div>
+</div>
+
+<script src="pagamento.js"></script>
+</body>
+</html>

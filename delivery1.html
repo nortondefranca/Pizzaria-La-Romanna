@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endereço de Entrega</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="delivery1.css" />
+</head>
+
+<body>
+
+  <div class="phone-frame">
+
+    <!-- Header -->
+    <div class="header">
+      <button class="back-btn" id="back-btn">&#8249;</button>
+      <h1 class="header-title">ENDEREÇO DE ENTREGA</h1>
+    </div>
+
+    <div class="content">
+
+      <!-- Toggle Delivery / Retirada -->
+      <div class="toggle-group">
+        <button class="toggle-btn active" id="btn-delivery" data-mode="delivery">
+          <img src="src/moto.png" alt="delivery icon" class="btn-icon" />
+          Delivery
+        </button>
+        <button class="toggle-btn" id="btn-retirada" data-mode="retirada"
+          onclick="window.location.href='retirada.html'">
+          <img src="src/shop.png" alt="retirada icon" class="btn-icon" />
+          Retirada
+        </button>
+      </div>
+
+      <!-- CEP -->
+      <div class="field-group">
+        <label class="field-label" for="cep">CEP</label>
+        <div class="input-wrapper" id="cep-wrapper">
+          <img src="src/local.png" alt="pin icon" class="input-icon" />
+          <input type="text" id="cep" placeholder="00000-000" maxlength="9" />
+          <span class="status-tag green" id="cep-status">
+
+            CEP encontrado
+          </span>
+        </div>
+        <span class="error-msg" id="cep-error"></span>
+      </div>
+
+      <!-- Endereço -->
+      <div class="field-group">
+        <label class="field-label" for="endereco">
+          ENDEREÇO
+          <span class="auto-tag">
+            <span class="dot"></span>PREENCHIDO AUTOMATICAMENTE
+          </span>
+        </label>
+        <div class="input-wrapper">
+          <img src="src/cep.png" alt="search icon" class="input-icon" />
+          <input type="text" id="endereco" value="Avenida Beberibe - Porto da Madeira/PE" readonly />
+        </div>
+      </div>
+
+      <!-- Número + Complemento -->
+      <div class="row-fields">
+        <div class="field-group half">
+          <label class="field-label" for="numero">NÚMERO</label>
+          <div class="input-wrapper">
+            <input type="text" id="numero" value="3530" />
+          </div>
+          <span class="error-msg" id="numero-error"></span>
+        </div>
+        <div class="field-group half-large">
+          <label class="field-label" for="complemento">
+            COMPLEMENTO
+            <span class="optional-tag">opcional</span>
+          </label>
+          <div class="input-wrapper">
+            <input type="text" id="complemento" placeholder="Apto, bloco..." />
+          </div>
+        </div>
+      </div>
+
+      <!-- Ponto de Referência -->
+      <div class="field-group">
+        <label class="field-label" for="referencia">
+          PONTO DE REFERÊNCIA
+          <span class="optional-tag">opcional</span>
+        </label>
+        <div class="input-wrapper">
+          <input type="text" id="referencia" placeholder="Ex: próximo ao mercado, portão azul..." />
+        </div>
+      </div>
+
+      <button class="confirm-btn" id="confirm-btn">
+        <img src="src/v.png" alt="check icon" class="btn-icon" />
+        CONFIRMAR ENDEREÇO
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="delivery1.js"></script>
+</body>
+
+</html>

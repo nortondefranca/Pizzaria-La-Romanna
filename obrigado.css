@@ -1,0 +1,101 @@
+/* =============================================
+   La Romana — Obrigado
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.phone-frame {
+  width: 393px;
+  min-height: 852px;
+  background: #A6B842;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 40px 24px;
+  margin-top: -150px;
+}
+
+/* ---- LOGO ---- */
+.logo-img {
+  width: 208px;
+  height: 208px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+
+/* ---- TÍTULO ---- */
+.titulo {
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 56.42px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+/* ---- SUBTÍTULO ---- */
+.subtitulo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 32px;
+}
+
+/* ---- WHATSAPP BTN ---- */
+.whatsapp-btn {
+  width: 63px;
+  height: 63px;
+  background: #034300;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.whatsapp-btn:hover  { background: #055700; }
+.whatsapp-btn:active { transform: scale(0.93); }
+
+.whatsapp-icon-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.acompanhar-btn {
+  margin-top: 16px;
+  background: #fff;
+  border: none;
+  border-radius: 22px;
+  padding: 12px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #034300;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.acompanhar-btn:hover  { opacity: 0.85; }
+.acompanhar-btn:active { transform: scale(0.97); }

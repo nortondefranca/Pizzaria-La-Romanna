@@ -1,0 +1,306 @@
+/* ==============================
+   RESET & BASE
+============================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F0E4C0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ==============================
+   PHONE FRAME
+============================== */
+.phone-frame {
+  width: 393px;
+  min-height: 852px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ==============================
+   HERO
+============================== */
+.hero {
+  background: #4A7C3F;
+  border-bottom: 0.47px solid #BCBCBC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 46px 22px 28px;
+  gap: 10px;
+}
+
+.avatar-circle {
+  width: 70px;
+  height: 70px;
+  background: #F2ECDA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  margin-bottom: 4px;
+}
+
+.hero-title {
+  font-size: 25.90px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.hero-order {
+  font-size: 13.53px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.79);
+  letter-spacing: 0.14px;
+}
+
+.delivery-badge {
+  background: #6B9861;
+  border-radius: 31px;
+  border: 0.47px solid #BCBCBC;
+  padding: 10px 28px;
+  font-size: 13.53px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* ==============================
+   CONTENT
+============================== */
+.content {
+  padding: 20px 22px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ==============================
+   FIDELIDADE HEADER
+============================== */
+.fidelidade-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 2px;
+}
+
+.fidelidade-line {
+  flex: 1;
+  height: 1px;
+  background: #766A62;
+}
+
+.fidelidade-label {
+  font-size: 13.53px;
+  font-weight: 600;
+  color: #766A62;
+  letter-spacing: 0.81px;
+  white-space: nowrap;
+}
+
+/* ==============================
+   PONTOS CARD
+============================== */
+.pontos-card {
+  background: rgba(255, 232, 190, 0.37);
+  border: 0.47px solid #C08F36;
+  border-radius: 8px;
+  padding: 14px 14px 14px 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pontos-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pontos-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pontos-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #383838;
+  line-height: 1.1;
+}
+
+.pontos-sub {
+  font-size: 11.76px;
+  font-weight: 600;
+  color: #8B7060;
+  line-height: 1.4;
+}
+
+/* ==============================
+   SEUS DADOS
+============================== */
+.seus-dados {
+  font-size: 13.53px;
+  font-weight: 600;
+  color: #515151;
+  margin-top: 4px;
+}
+
+/* ==============================
+   FIELDS
+============================== */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-wrapper {
+  background: #F1F1F1;
+  border-radius: 8px;
+  border: 0.47px solid #BCBCBC;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  height: 50px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #4A7C3F;
+  box-shadow: 0 0 0 2px rgba(74,124,63,0.12);
+}
+
+.input-wrapper.error { border-color: #C93030; }
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14.11px;
+  font-weight: 500;
+  color: #252525;
+  width: 100%;
+}
+
+.input-wrapper input::placeholder {
+  color: #252525;
+  opacity: 0.35;
+}
+
+.error-msg {
+  font-size: 10px;
+  color: #C93030;
+  font-weight: 500;
+  min-height: 13px;
+  padding-left: 2px;
+}
+
+/* ==============================
+   CONFIRM BUTTON
+============================== */
+.confirm-btn {
+  width: 100%;
+  height: 49px;
+  background: #9B1C1C;
+  border: 0.47px solid #BCBCBC;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15.18px;
+  font-weight: 600;
+  color: #FEFEFD;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.confirm-btn:hover  { background: #7e1616; }
+.confirm-btn:active { transform: scale(0.98); }
+
+/* ==============================
+   SKIP BUTTON
+============================== */
+.skip-btn {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.53px;
+  font-weight: 600;
+  color: #515151;
+  cursor: pointer;
+  text-align: center;
+  padding: 4px;
+  transition: opacity 0.2s;
+}
+
+.skip-btn:hover { opacity: 0.6; }
+
+/* ==============================
+   FAB WHATSAPP
+============================== */
+.fab-whatsapp {
+  position: fixed;
+  bottom: 28px;
+  right: calc(50% - 393px/2 + 14px);
+  width: 37px;
+  height: 37px;
+  background: #034300;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.2s, transform 0.15s;
+  z-index: 10;
+}
+
+
+.fab-whatsapp:hover  { background: #055700; }
+.fab-whatsapp:active { transform: scale(0.93); }
+
+/* ==============================
+   TOAST
+============================== */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #252525;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.toast.show  { transform: translateX(-50%) translateY(0); opacity: 1; }
+.toast.green { background: #4A7C3F; }
+.toast.red   { background: #9B1C1C; }

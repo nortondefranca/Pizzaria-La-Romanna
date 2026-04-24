@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>La Romana — Home</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="mobile-frame">
+
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <span class="top-bar-text">Faça agora mesmo o seu pedido!</span>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <img class="header-logo" src="src/logo principal.png" alt="La Romana">
+    <a href="carrinho.html" class="cart-wrap">
+      <img class="header-cart" src="src/carrinho.png" alt="Carrinho">
+      <span class="cart-badge" id="cartBadge">0</span>
+    </a>
+  </header>
+
+  <!-- Saudação -->
+  <div class="greeting">
+    <h1 class="greeting-text">
+      Bem vindo - <span class="greeting-highlight">La Romana</span>
+    </h1>
+    <div class="greeting-address">
+      <img class="address-icon" src="src/localizacao.png" alt="Local">
+      <span class="address-text">Terça à Domingo (17:30 - 22:00)</span>
+    </div>
+  </div>
+
+  <!-- Banner carrossel -->
+  <div class="banner" id="bannerEl">
+    <img class="banner-img" id="bannerImg" src="src/promo1.jpeg" alt="Banner">
+    <div class="banner-dots" id="bannerDots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- Busca -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" class="search-input" id="searchInput" placeholder="O que quero pedir hoje?">
+    <button class="search-btn" id="searchBtn">
+      <svg width="16" height="16" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="M21 21l-4.35-4.35"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Categorias -->
+  <div class="categories" id="categories">
+    <div class="category-item active-cat" data-href="cardapio.html#entrada">
+      <img class="category-icon" src="src/entrada.png" alt="Entradas">
+      <span class="category-name">Entradas</span>
+    </div>
+    <div class="category-item" data-href="cardapio.html#massas">
+      <img class="category-icon" src="src/massas.png" alt="Massas">
+      <span class="category-name">Massas Italianas</span>
+    </div>
+    <div class="category-item" data-href="cardapio.html#pizza">
+      <img class="category-icon" src="src/pizza.png" alt="Pizza">
+      <span class="category-name">Pizza Grande</span>
+    </div>
+    <div class="category-item" data-href="cardapio.html#bebida">
+      <img class="category-icon" src="src/bebida.png" alt="Bebidas">
+      <span class="category-name">Bebidas</span>
+    </div>
+  </div>
+
+  <!-- Recomendados -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Recomendado</h2>
+      <a href="cardapio.html#pizzas" class="section-link">Ver mais</a>
+    </div>
+    <div class="cards-row">
+      <div class="card" onclick="window.location.href='cardapio.html#pizzas'">
+        <img class="card-img" src="src/molho de tomate.png" alt="Pizza">
+        <p class="card-desc">Molho de tomate, queijo mozzarela, tomate fresco, cebola e orégano</p>
+      </div>
+      <div class="card" onclick="window.location.href='cardapio.html#pizzas'">
+        <img class="card-img" src="src/chocolate.png" alt="Chocolate">
+        <p class="card-desc">Chocolate coberto com pedaços de sonho de valsa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Massas Italianas -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Massas Italianas</h2>
+      <a href="cardapio.html#massas" class="section-link">Ver mais</a>
+    </div>
+    <div class="massa-banner" onclick="window.location.href='cardapio.html#massas'">
+      <img class="massa-banner-img" src="src/macarrao.png" alt="Massa">
+    </div>
+  </section>
+
+  <!-- Nav inferior -->
+  <nav class="bottom-nav">
+    <a href="home.html" class="nav-item active">
+      <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Início</span>
+    </a>
+    <a href="cardapio.html" class="nav-item">
+      <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+    </a>
+    <a href="meuspedidos.html" class="nav-item">
+      <img src="src/pedidos.png" alt="Pedidos" width="22" height="22">
+    </a>
+    <a href="fidelidade.html" class="nav-item">
+      <svg width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </a>
+  </nav>
+
+</div>
+<script src="home.js"></script>
+</body>
+</html>

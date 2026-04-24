@@ -1,0 +1,282 @@
+/* ==============================
+   RESET & BASE
+============================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F0E4C0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* ==============================
+   PHONE FRAME
+============================== */
+.phone-frame {
+  width: 393px;
+  min-height: 852px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==============================
+   HEADER
+============================== */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 32px 22px 18px;
+  gap: 10px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #C93030;
+  font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.back-btn:hover { opacity: 0.7; }
+
+.header-title {
+  font-size: 18.14px;
+  font-weight: 600;
+  color: #252525;
+  text-align: center;
+  flex: 1;
+}
+
+/* ==============================
+   CONTENT
+============================== */
+.content {
+  padding: 0 22px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ==============================
+   BANNER DE PONTOS
+============================== */
+.pontos-banner {
+  background: #6B9861;
+  border-radius: 8px;
+  border: 0.47px solid #BCBCBC;
+  padding: 13px 16px;
+  font-size: 13.53px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+/* ==============================
+   SECTION LABEL
+============================== */
+.section-label {
+  font-size: 13.77px;
+  font-weight: 500;
+  color: #252525;
+  letter-spacing: 0.41px;
+  margin-bottom: -4px;
+}
+
+/* ==============================
+   LISTA DE PAGAMENTOS
+============================== */
+.payment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 2px solid #6E6E6E;
+  border-radius: 8px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.15s;
+  user-select: none;
+}
+
+.payment-option:hover {
+  background: #fafafa;
+}
+
+.payment-option.selected {
+  border-color: #C93030;
+}
+
+.payment-icon {
+  font-size: 26px;
+  flex-shrink: 0;
+  width: 38px;
+  text-align: center;
+}
+
+.payment-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.payment-name {
+  font-size: 14.11px;
+  font-weight: 500;
+  color: #252525;
+}
+
+.payment-sub {
+  font-size: 11.21px;
+  font-weight: 300;
+  color: #252525;
+}
+
+/* ==============================
+   RADIO CIRCLE
+============================== */
+.radio-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid #6E6E6E;
+  background: white;
+  flex-shrink: 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.radio-circle.selected {
+  border-color: #C93030;
+  box-shadow: inset 0 0 0 3px white, inset 0 0 0 8px #9B1C1C;
+}
+
+/* ==============================
+   RESUMO
+============================== */
+.resumo-title {
+  font-size: 18.61px;
+  font-weight: 700;
+  color: #202020;
+  margin-bottom: -6px;
+}
+
+.resumo-card {
+  background: #F2F2F2;
+  border-radius: 11px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resumo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resumo-label {
+  font-size: 13.94px;
+  font-weight: 500;
+  color: #333;
+}
+
+.resumo-value {
+  font-size: 13.94px;
+  font-weight: 500;
+  color: #333;
+}
+
+.resumo-value.green {
+  color: #4A7C3F;
+  font-weight: 600;
+}
+
+.resumo-divider {
+  height: 0;
+  border-top: 0.5px solid #D6D6D6;
+  margin: 2px 0;
+}
+
+.resumo-row.total {
+  margin-top: 2px;
+}
+
+.resumo-label-total {
+  font-size: 16.07px;
+  font-weight: 700;
+  color: #202020;
+}
+
+.resumo-value-total {
+  font-size: 16.33px;
+  font-weight: 700;
+  color: #C93030;
+}
+
+/* ==============================
+   CONFIRM BUTTON
+============================== */
+.confirm-btn {
+  width: 100%;
+  height: 49px;
+  background: #9B1C1C;
+  border: 0.47px solid #BCBCBC;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15.18px;
+  font-weight: 600;
+  color: #FEFEFD;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.confirm-btn:hover  { background: #7e1616; }
+.confirm-btn:active { transform: scale(0.98); }
+
+/* ==============================
+   TOAST
+============================== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #252525;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.toast.show  { transform: translateX(-50%) translateY(0); opacity: 1; }
+.toast.green { background: #4A7C3F; }
+.toast.red   { background: #9B1C1C; }

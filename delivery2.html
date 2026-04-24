@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endereço de Entrega</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="delivery2.css" />
+</head>
+<body>
+
+<div class="phone-frame">
+
+  <div class="header">
+    <button class="back-btn" id="back-btn">&#8249;</button>
+    <h1 class="header-title">ENDEREÇO DE ENTREGA</h1>
+  </div>
+
+  <div class="content">
+
+    <!-- Toggle -->
+    <div class="toggle-group">
+      <button class="toggle-btn active" id="btn-delivery">🛵 Delivery</button>
+      <button class="toggle-btn" id="btn-retirada" onclick="window.location.href='retirada.html'">🏪 Retirada</button>
+    </div>
+
+    <!-- Endereço salvo -->
+    <div class="section-label">ENTREGAR NO ENDEREÇO</div>
+    <div class="address-card">
+      <div class="address-icon">📍</div>
+      <div class="address-info">
+        <div class="address-main" id="address-main">Av. Beberibe, 3530</div>
+        <div class="address-sub" id="address-sub">Porto da Madeira - Bloco C2, Apto 404</div>
+      </div>
+      <button class="trocar-btn" id="trocar-btn">Trocar</button>
+    </div>
+
+    <!-- Taxa de entrega -->
+    <div class="section-label">TAXA DE ENTREGA</div>
+    <div class="taxa-card" id="taxa-card">
+      <div class="taxa-left">
+        <div class="radio-circle selected"></div>
+        <div class="taxa-info">
+          <div class="taxa-nome">Padrão</div>
+          <div class="taxa-tempo">Hoje, 50 - 60min</div>
+        </div>
+      </div>
+      <div class="taxa-valor">R$ 8,00</div>
+    </div>
+
+    <!-- Confirmar -->
+    <a href="ident.html" class="confirm-btn" id="confirm-btn">✓ CONFIRMAR ENDEREÇO</a>
+
+  </div>
+</div>
+
+<!-- Modal Trocar Endereço -->
+<div class="modal-overlay" id="modal" style="display:none;">
+  <div class="modal-box">
+    <h2 class="modal-title">Trocar Endereço</h2>
+
+    <div class="modal-field">
+      <label for="cep">CEP</label>
+      <div class="input-wrapper" id="cep-wrapper">
+        <input type="text" id="cep" placeholder="00000-000" maxlength="9" />
+        <span class="status-tag hidden" id="cep-status"></span>
+      </div>
+      <span class="error-msg" id="cep-error"></span>
+    </div>
+
+    <div class="modal-field">
+      <label for="endereco">ENDEREÇO</label>
+      <div class="input-wrapper">
+        <input type="text" id="endereco" placeholder="Preenchido pelo CEP" readonly />
+      </div>
+    </div>
+
+    <div class="modal-row">
+      <div class="modal-field" style="flex: 0 0 130px;">
+        <label for="numero">NÚMERO</label>
+        <div class="input-wrapper" id="numero-wrapper">
+          <input type="text" id="numero" placeholder="0000" />
+        </div>
+        <span class="error-msg" id="numero-error"></span>
+      </div>
+      <div class="modal-field" style="flex: 1;">
+        <label for="complemento">COMPLEMENTO <span class="optional-tag">opcional</span></label>
+        <div class="input-wrapper">
+          <input type="text" id="complemento" placeholder="Apto, bloco..." />
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-field">
+      <label for="referencia">PONTO DE REFERÊNCIA <span class="optional-tag">opcional</span></label>
+      <div class="input-wrapper">
+        <input type="text" id="referencia" placeholder="Ex: próximo ao mercado, portão azul..." />
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="modal-cancel" id="modal-cancel">Cancelar</button>
+      <button class="modal-save" id="modal-save">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<script src="script2.js"></script>
+</body>
+</html>
